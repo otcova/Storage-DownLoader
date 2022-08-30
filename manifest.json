@@ -1,0 +1,14 @@
+{
+	"name": "Storage DownLoader",
+	"manifest_version": 3,
+	"version": "1.0",
+	"description": "Download and load local storage of a website into and from a file",
+	"permissions": ["scripting", "tabs"],
+	"host_permissions": ["<all_urls>"],
+	"action": {
+		"default_popup": "dialog.html"
+	},
+	"icons": {
+		"225": "cookie.png"
+	}
+}

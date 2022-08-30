@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Dialog test</title>
+	<style>
+		body {
+			background-color: #262833;
+			color: #fff;
+			font-family: "JetBrains Mono", monospace;
+			font-size: 20px;
+			margin-top: 20px;
+		}
+		
+		div {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 10px;
+		}
+		
+		#download, #load {
+			position: relative;
+  			font-size: 16px;
+			cursor: pointer;
+			width: 100px;
+			height: 48px;
+			background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+			border-radius: 6px;
+			box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+			transition: box-shadow .15s,transform .15s;
+			user-select: none;
+			touch-action: manipulation;
+		}
+
+		#download:focus, #load:focus {
+			box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+		}
+
+		#download:hover, #load:hover {
+			box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+			transform: translateY(-2px);
+		}
+
+		#download:active, #load:active {
+			box-shadow: #3c4fe0 0 3px 7px inset;
+			transform: translateY(2px);
+		}
+		
+		input {
+			position: absolute;
+			cursor: pointer;
+			inset: 0px;
+			opacity: 0;
+		}
+		
+	</style>
+	<script src="./main.js" async defer></script>
+</head>
+
+<body>
+	<div>Storage</div>
+	<div>
+		<div id="download">Download</div>
+		<div id="load">
+			Load
+			<input id="drop-file" type="file">
+		</div>
+	</div>
+</body>
+
+</html>
+
